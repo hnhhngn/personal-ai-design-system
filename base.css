@@ -22,107 +22,111 @@
    ========================================================== */
 
 :root {
-  /* ========================================================
+   /* ========================================================
      TYPOGRAPHY
      ======================================================== */
-  --font-base: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+   --font-base: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
-  /* ========================================================
+   /* ========================================================
      COLORS
      ======================================================== */
-  --color-text-primary: #333333;
-  --color-surface-root: #e3e4e6;
-  --color-surface-panel: rgba(255, 255, 255, 0.6);
+   --color-text-primary: #333333;
+   --color-surface-root: #e3e4e6;
+   --color-surface-panel: rgba(255, 255, 255, 0.6);
 
-  /* ========================================================
+   /* ========================================================
      RADIUS
      ======================================================== */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 24px;
+   --radius-sm: 8px;
+   --radius-md: 12px;
+   --radius-lg: 24px;
 
-  /* ========================================================
+   /* ========================================================
      SPACING
      ======================================================== */
-  --space-xs: 4px;
-  --space-sm: 8px;
-  --space-md: 16px;
-  --space-lg: 24px;
+   --space-xs: 4px;
+   --space-sm: 8px;
+   --space-md: 16px;
+   --space-lg: 24px;
 
-  /* ========================================================
+   /* ========================================================
      SHADOW (PHYSICAL DEPTH)
      ======================================================== */
-  --shadow-depth-1: 0 4px 0 #cbd5e1;
-  --shadow-depth-2: 0 6px 0 #94a3b8;
+   --shadow-depth-1: 0 4px 0 #cbd5e1;
+   --shadow-depth-2: 0 6px 0 #94a3b8;
 
-  /* ========================================================
+   /* ========================================================
      MOTION
      ======================================================== */
-  --motion-fast: 120ms;
-  --motion-normal: 200ms;
-  --motion-ease: ease-out;
+   --motion-fast: 120ms;
+   --motion-normal: 200ms;
+   --motion-ease: ease-out;
 
-  /* ========================================================
+   /* ========================================================
      OPACITY
      ======================================================== */
-  --opacity-muted: 0.5;
+   --opacity-muted: 0.5;
 
-  /* ========================================================
+   /* ========================================================
      LAYOUT
      ======================================================== */
-  --layout-max-width: 960px;
+   --layout-max-width: 960px;
 
-  /* ========================================================
+   /* ========================================================
      COMPONENT TOKENS – LOCKED CORE (v1.x)
      ======================================================== */
 
-  /* ---------------- Button (Shared) ---------------- */
-  --button-press-offset: 4px;
-  --button-shadow-default: var(--shadow-depth-2);
-  --button-shadow-pressed: var(--shadow-depth-1);
+   /* ---------------- Button (Shared) ---------------- */
+   --button-press-offset: 4px;
+   --button-shadow-default: var(--shadow-depth-2);
+   --button-shadow-pressed: var(--shadow-depth-1);
 
-  /* Button – Blue (Primary) */
-  --button-blue-bg: #2563eb;
+   /* Button – Blue (Primary) */
+   --button-blue-bg: #2563eb;
 
-  /* Button – Green (Feature / Success) */
-  --button-green-bg: #10b981;
+   /* Button – Green (Feature / Success) */
+   --button-green-bg: #10b981;
 
-  /* Button – Yellow (Secondary Highlight – v1.1) */
-  --button-yellow-bg: #facc15;
-  --button-yellow-shadow: 0 6px 0 #ca8a04;
-  --button-yellow-shadow-pressed: 0 4px 0 #ca8a04;
+   /* Button – Yellow (Secondary Highlight – v1.1) */
+   --button-yellow-bg: #facc15;
+   --button-yellow-shadow: 0 6px 0 #ca8a04;
+   --button-yellow-shadow-pressed: 0 4px 0 #ca8a04;
 
-  /* ---------------- Tag ---------------- */
-  --tag-padding: 0 var(--space-md);
-  --tag-radius: 16px;
-  --tag-bg-inactive: #ffffff;
-  --tag-bg-active: #ffffff;
+   /* ---------------- Tag ---------------- */
+   --tag-padding: 0 var(--space-md);
+   --tag-radius: 16px;
+   --tag-bg-inactive: #ffffff;
+   --tag-bg-active: #ffffff;
 
-  /* ---------------- Knob ---------------- */
-  --knob-size: 56px;
-  --knob-bg: #ef4444;
-  --knob-icon-color: #991b1b;
-  --knob-rotate-duration: 450ms;
+   /* ---------------- Knob ---------------- */
+   --knob-size: 56px;
+   --knob-bg: #ef4444;
+   --knob-icon-color: #991b1b;
+   --knob-rotate-duration: 450ms;
+   /* ---------------- Knob (v1.3 – corrected) ---------------- */
+   --knob-shadow: 0 6px 0 #991b1b;
+   --knob-shadow-pressed: 0 3px 0 #991b1b;
+   /* Icon occupies ~65% of knob diameter */
+   --knob-icon-size-ratio: 0.65;
 
-  /* ---------------- Sidebar ---------------- */
-  --sidebar-width-collapsed: 80px;
-  --sidebar-width-expanded: 320px;
-  --sidebar-gap: 20px;
 
-  /* ========================================================
+   /* ---------------- Sidebar ---------------- */
+   --sidebar-width-collapsed: 80px;
+   --sidebar-width-expanded: 320px;
+   --sidebar-gap: 20px;
+
+   /* ========================================================
      EXPERIMENTAL TOKENS – RGB EFFECT (v1.2)
      Decorative / Ambient only
      ======================================================== */
 
-  --rgb-gradient: linear-gradient(
-    90deg,
-    rgba(255, 0, 80, 0.8),
-    rgba(0, 255, 160, 0.8),
-    rgba(0, 120, 255, 0.8)
-  );
+   --rgb-gradient: linear-gradient(90deg,
+         rgba(255, 0, 80, 0.8),
+         rgba(0, 255, 160, 0.8),
+         rgba(0, 120, 255, 0.8));
 
-  --rgb-opacity: 0.6;
-  --rgb-animation-duration: 12s;
+   --rgb-opacity: 0.6;
+   --rgb-animation-duration: 12s;
 }
 
 /* ==========================================================

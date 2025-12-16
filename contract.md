@@ -23,6 +23,7 @@ Status: **Active (Enforced, Additive-only)**
 ```
 
 ### Priority Order (highest → lowest)
+
 1. **AI-ready Contract** (this document)
 2. **Design System Spec**
 3. Generated output (HTML / CSS / JS)
@@ -47,6 +48,7 @@ If any conflict exists, **higher priority overrides lower priority**.
 ```
 
 Rules:
+
 - Every visual value MUST reference a token
 - No raw color / shadow / motion values may be invented
 
@@ -84,6 +86,7 @@ Rules:
 ```
 
 Rules:
+
 - AI MAY read tokens from `base.css`
 - AI MUST NOT modify or regenerate `base.css`
 - UI code must adapt to tokens, not the reverse
@@ -100,7 +103,16 @@ Rules:
       "behavior": "immutable"
     },
     "knob": {
-      "interaction_model": "immutable"
+      "interaction_model": "hold-and-rotate",
+      "click_behavior": "depth-press-only",
+      "press_hold_behavior": "forbidden",
+      "icon_required": true,
+      "shadow_required": true,
+      "rotation_constraints": {
+      "rotation_requires_hold": true,
+      "rotate_without_hold": "no-op",
+      "shadow_rotates": false,
+      "icon_rotates_with_face": true
     },
     "sidebar": {
       "layout_logic": "immutable"
@@ -114,6 +126,7 @@ Rules:
 ```
 
 AI MUST NOT:
+
 - Change semantics
 - Change interaction models
 - Replace core components with custom implementations
@@ -127,19 +140,14 @@ AI MUST NOT:
   "button_yellow_rules": {
     "max_instances_per_view": 1,
     "requires_primary_present": true,
-    "allowed_roles": [
-      "secondary-highlight",
-      "attention-confirmation"
-    ],
-    "forbidden_roles": [
-      "primary-action",
-      "destructive-action"
-    ]
+    "allowed_roles": ["secondary-highlight", "attention-confirmation"],
+    "forbidden_roles": ["primary-action", "destructive-action"]
   }
 }
 ```
 
 Token requirements:
+
 - `--button-yellow-bg`
 - `--button-yellow-shadow`
 - `--button-yellow-shadow-pressed`
@@ -160,6 +168,7 @@ Token requirements:
 ```
 
 ### Allowed Scope
+
 ```json
 {
   "rgb_effect_scope": {
@@ -173,6 +182,7 @@ Token requirements:
 ```
 
 ### Forbidden Usage
+
 ```json
 {
   "rgb_effect_forbidden": {
@@ -190,11 +200,13 @@ Token requirements:
 ```
 
 ### Token Requirements
+
 - `--rgb-gradient`
 - `--rgb-opacity`
 - `--rgb-animation-duration`
 
 ### Animation Constraints
+
 ```json
 {
   "rgb_animation_rules": {
@@ -223,6 +235,7 @@ RGB Effect MAY be used **only if explicitly enabled in CURRENT.md**.
 ```
 
 AI MUST:
+
 1. Stop generation
 2. Ask a clarification question
 3. Wait for confirmation
@@ -246,6 +259,7 @@ AI MUST:
 ## 10. Failure Conditions
 
 Output is **invalid** if AI:
+
 - Violates token rules
 - Modifies `base.css`
 - Breaks core component locks

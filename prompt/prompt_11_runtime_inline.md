@@ -1,8 +1,11 @@
 Use my Personal AI Design System.
 
-CURRENT.md:
+Read CURRENT.md to determine:
 
-## <PASTE CURRENT.md CONTENT HERE>
+- Active spec
+- Active contract
+- Active token runtime
+- Enabled / disabled features
 
 Treat this file as the single source of truth.
 Do NOT assume any style, token, component, or behavior

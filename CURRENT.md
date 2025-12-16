@@ -66,4 +66,21 @@ If a required capability is missing, AI MUST stop and ask before proceeding.
 
 ---
 
+## Breaking Corrections
+
+### Knob (v1.3)
+
+- Knob interaction model has been **corrected**.
+- Click behavior is now **depth press only**.
+- Press-and-hold without rotation has been removed.
+- Hold + rotate is the primary interaction for value adjustment.
+- Knob now **requires**:
+  - physical shadow with pressed state
+  - static shadow (does not rotate)
+  - mandatory icon (~65% of knob size)
+
+Any previous click-to-rotate behavior is **invalid** and must not be used.
+
+---
+
 **End of CURRENT.md**
